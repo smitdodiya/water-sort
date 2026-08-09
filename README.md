@@ -60,7 +60,7 @@ keep `release.keystore` in place.
 ## Checks
 
 ```bash
-npm test           # 87 tests over the rules, solver, generator, and store
+npm test           # 97 tests over the rules, solver, generator, and store
 npm run typecheck  # tsc --noEmit
 ```
 
@@ -126,7 +126,7 @@ Sounds and icons are generated from source rather than checked in as opaque
 binaries, so they can be retuned by editing numbers:
 
 ```bash
-npm run gen:sounds   # synthesizes the six WAV effects
+npm run gen:sounds   # synthesizes the eight WAV effects
 npm run gen:icon     # draws the app icon, splash, and adaptive icon layers
 ```
 
