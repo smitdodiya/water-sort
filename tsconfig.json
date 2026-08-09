@@ -1,6 +1,11 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    // Declared explicitly so `tsc --noEmit` covers the test files too; ts-jest
+    // supplies these globals at run time but the project-wide check does not.
+    "types": ["jest", "node"]
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
+  "exclude": ["node_modules"]
 }

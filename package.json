@@ -1,22 +1,48 @@
 {
   "name": "water-sort",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "dependencies": {
+    "@expo/metro-runtime": "~57.0.8",
+    "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~57.0.11",
+    "expo-audio": "~57.0.3",
+    "expo-blur": "~57.0.2",
+    "expo-constants": "~57.0.9",
+    "expo-haptics": "~57.0.1",
+    "expo-linear-gradient": "~57.0.1",
+    "expo-linking": "~57.0.5",
+    "expo-router": "~57.0.11",
     "expo-status-bar": "~57.0.1",
     "react": "19.2.3",
-    "react-native": "0.86.2"
+    "react-dom": "19.2.3",
+    "react-native": "0.86.2",
+    "react-native-gesture-handler": "~2.32.0",
+    "react-native-reanimated": "4.5.1",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "^0.21.2",
+    "react-native-worklets": "0.10.1",
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/react": "~19.2.2",
+    "jest": "~29.7.0",
+    "ts-jest": "^29.4.12",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "web": "expo start --web",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit",
+    "gen:sounds": "node scripts/generate-sounds.js",
+    "gen:icon": "node scripts/generate-icon.js",
+    "build:apk": "eas build -p android --profile preview"
   },
   "private": true
 }
